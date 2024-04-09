@@ -7,8 +7,17 @@ import NotesApp from "../../assets/projectCoverImages/NotesApp.png";
 import FoodApp from "../../assets/projectCoverImages/Food_app_mockup.png";
 import MemeGenerator from "../../assets/projectCoverImages/memeGenerator.png";
 import BMIApp from "../../assets/projectCoverImages/bmi_app.png";
+import JobListing from "../../assets/projectCoverImages/Joblisting.png";
 
 const data = [
+  {
+    image: JobListing,
+    title: 'JobListing Platform',
+    github: 'https://github.com/prajesh9921/JobListing_Frontend',
+    demo: 'https://joblisting-frontend--pngjoblisting.netlify.app',
+    demoStatus: true,
+    description: "Job listing platform offers user authentication, job posting, and management functionalities for a seamless experience connecting job seekers and employers."
+  },
   {
     image: PocketNote,
     title: "Pocket Notes",
