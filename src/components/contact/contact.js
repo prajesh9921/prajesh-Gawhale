@@ -65,7 +65,7 @@ const Contact = () => {
             <BsWhatsapp className="contact_option-icon" />
             <h4>WhatsApp</h4>
             <h5>+917083367768</h5>
-            <a onClick={handleClick} target="_blank" rel="noreferrer">
+            <a href="" onClick={handleClick} target="_blank" rel="noreferrer">
               Send a message
             </a>
           </article>
