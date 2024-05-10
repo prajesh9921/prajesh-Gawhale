@@ -4,6 +4,7 @@ import CTA from "./CTA";
 import HeaderSocial from "./headerSocial";
 import ComputerAnimation from "../../assets/lottie/computer.json";
 import Lottie from "react-lottie";
+import { TypeAnimation } from 'react-type-animation';
 
 const Header = () => {
 
@@ -31,12 +32,29 @@ const Header = () => {
     },
   };
 
+  const Subheading = () => {
+    return (
+      <TypeAnimation
+        sequence={[
+          'Frontend Developer',
+          1000,
+          'Built websites using ReactJS',
+          1000,
+          'Developed apps in React Native',
+          1000,
+        ]}
+        cursor={true}
+        repeat={Infinity}
+      />
+    );
+  };
+
   return (
     <header data-section id="header">
       <div className="header_container">
-        <h5>Hello I'm</h5>
+        <h4>Hello I'm</h4>
         <h1 className="header_name">Prajesh Gawhale</h1>
-        <h5 className="text-light">Frontend Developer</h5>
+        <h4 className="text-light"><Subheading/></h4>
         <CTA />
         <div className="socials">
           <HeaderSocial />
