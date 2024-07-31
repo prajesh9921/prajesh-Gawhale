@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./portfolio.css";
 import data from "./data";
+import { FaGithub, FaLink, FaYoutube  } from "react-icons/fa";
 
 const Portfolio = () => {
   const ITEMS_SHOW_LESS = 6;
@@ -24,31 +25,47 @@ const Portfolio = () => {
           return (
             <article key={index} className="portfolio_item">
               <div className="portfolio_item-image">
-                {item.image ? <img
-                  src={item.image}
-                  alt={item.title}
-                  className="portfolio_image"
-                /> : <p style={{fontSize: 30, fontWeight: 'bold'}}>{item.title}</p> }
+                {item.image ? (
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="portfolio_image"
+                  />
+                ) : (
+                  <p style={{ fontSize: 30, fontWeight: "bold" }}>
+                    {item.title}
+                  </p>
+                )}
               </div>
               <h3>{item.title}</h3>
-              <p className="portfolio_description">{item.description}</p>
+              <div className="descriptionbox">
+                <p className="portfolio_description">{item.description}</p>
+              </div>
               <div className="portfolio_container-cta">
                 <a
                   href={item.github}
-                  className="btn"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Github
+                  <FaGithub color="#4db5ff" size={22} />
                 </a>
                 {item.demoStatus ? (
                   <a
                     href={item.demo}
-                    className="btn btn-primary"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Live Demo
+                    <FaLink color="#4db5ff" size={22} />
+                  </a>
+                ) : null}
+
+                {item.videolink ? (
+                  <a
+                    href={item.videolink}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FaYoutube color="#4db5ff" size={22} />
                   </a>
                 ) : null}
               </div>
