@@ -11,6 +11,7 @@ function App() {
   const [activeSection, setActiveSection] = useState(null);
   const sections = useRef([]);
 
+  // Function to scroll
   const handleScroll = () => {
     const viewportHeight = window.innerHeight;
     const halfViewport = viewportHeight / 2;
